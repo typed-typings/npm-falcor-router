@@ -11,7 +11,7 @@ declare class Router extends DataSource {
    */
   routeUnhandledPathsTo (dataSource: DataSource): void;
 
-  static createClass (routes?: Array<Router.Definition>): Router;
+  static createClass (routes?: Array<Router.Definition>): Router.CreatedRouter;
 }
 
 declare namespace Router {
@@ -19,6 +19,10 @@ declare namespace Router {
     debug?: boolean;
     maxPaths?: number;
     maxRefFollow?: number;
+  }
+
+  export class CreatedRouter extends Router {
+    constructor(options?: Options);
   }
 
   export interface Route {
