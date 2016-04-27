@@ -1,0 +1,14 @@
+{
+  "name": "falcor-router",
+  "main": "src/Router.d.ts",
+  "version": "^0.4.0",
+  "homepage": "https://github.com/Netflix/falcor-router",
+  "ambientDevDependencies": {
+    "node": "registry:dt/node#4.0.0+20160412142033"
+  },
+  "dependencies": {
+    "es6-promise": "registry:npm/es6-promise#3.0.0+20160211003958",
+    "falcor": "registry:npm/falcor#0.1.0+20160427193439",
+    "falcor-json-graph": "registry:npm/falcor-json-graph#1.1.0+20160427033401"
+  }
+}
