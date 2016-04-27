@@ -11,7 +11,7 @@ declare class Router extends DataSource {
    */
   routeUnhandledPathsTo (dataSource: DataSource): void;
 
-  static createClass (routes?: Array<Router.Definition>): Router.CreatedRouter;
+  static createClass (routes?: Array<Router.Definition>): typeof Router.CreatedRouter;
 }
 
 declare namespace Router {
