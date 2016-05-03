@@ -34,7 +34,7 @@ declare namespace Router {
   }
 
   export interface GetRoute extends Route {
-    get (pathset: PathSet): Result<any> | Thenable<Result<any>>;
+    get (pathSet: PathSet): Result<any> | Thenable<Result<any>>;
   }
 
   export interface SetRoute extends Route {
