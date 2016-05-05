@@ -30,7 +30,7 @@ declare namespace Router {
   }
 
   export interface CallRoute extends Route {
-    call (callPath: PathSet, args: Array<any>): Result<any> | Thenable<Result<any>>;
+    call (functionPath: PathSet, args: Array<any>, refPaths?: Array<PathSet>, thisPaths?: Array<PathSet>): Result<any> | Thenable<Result<any>>;
   }
 
   export interface GetRoute extends Route {
