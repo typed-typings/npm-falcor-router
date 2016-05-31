@@ -1,6 +1,6 @@
-import { DataSource } from 'falcor'
-import { PathSet, JSONGraph, PathValue, JSONEnvelope } from 'falcor-json-graph'
-import { Thenable } from 'es6-promise'
+import { DataSource } from 'falcor';
+import { PathSet, JSONGraph, PathValue, JSONEnvelope, InvalidPath } from 'falcor-json-graph';
+import { Thenable } from 'es6-promise';
 
 declare class Router extends DataSource {
   constructor (routes: Array<Router.Definition>, options?: Router.Options);
@@ -43,7 +43,7 @@ declare namespace Router {
 
   export type Definition = GetRoute | SetRoute | CallRoute;
 
-  export type Result <T> = PathValue<T> | Array<PathValue<T>> | JSONEnvelope<T>;
+  export type Result <T> = InvalidPath | PathValue<T> | Array<InvalidPath | PathValue<T>> | JSONEnvelope<T>;
 
   export var ranges: string;
   export var integers: string;
